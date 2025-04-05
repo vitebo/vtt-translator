@@ -1,5 +1,7 @@
 # VTT Translator Development Guide
 
+VTT Translator is a script for translating VTT files using the OpenAI API.
+
 ## Commands
 - `npx tsx translate-vtt.ts` - Translate VTT files
 
@@ -15,4 +17,6 @@
 - **Testing**: Write unit tests for all exports
 - **Documentation**: Document public API with JSDoc
 
-VTT Translator is a script for translating VTT files using the OpenAI API.
+## Commit Messages
+
+Use conventional commits for commit messages.
