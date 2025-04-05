@@ -1,18 +1,49 @@
 {
   "name": "vtt-translator",
-  "version": "1.0.0",
+  "type": "module",
+  "version": "0.0.0",
   "description": "Translate VTT files",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitebo/github-awards.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "bin": {
+    "vtt-translator": "./dist/cli.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "prepublishOnly": "pnpm build"
+  },
+  "keywords": [
+    "vtt",
+    "translator",
+    "openai",
+    "cli"
+  ],
+  "author": "vitebo",
+  "license": "MIT",
   "packageManager": "pnpm@10.7.0",
   "dependencies": {
+    "citty": "^0.1.6",
     "dotenv": "^16.4.7",
     "node-webvtt": "^1.9.4",
-    "openai": "^4.91.1"
+    "openai": "^4.91.1",
+    "consola": "^3.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "changelogs": "^0.0.0",
+    "eslint": "^9.23.0",
+    "eslint-config-unjs": "^0.4.2",
+    "typescript": "^5.8.2",
+    "unbuild": "^3.5.0",
+    "vitest": "^3.0.9"
   }
 }
